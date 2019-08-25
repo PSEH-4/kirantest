@@ -16,7 +16,7 @@ public class StandingServiceImpl implements StandingsService{
 	StandingsRepository repository;
 
 	@Override
-	public Standings getStandingsByTeam(int teamId) {
+	public Standings getStandingsByTeam(Integer teamId) {
 		return repository.getStandingsByTeam(teamId);
 	}
 

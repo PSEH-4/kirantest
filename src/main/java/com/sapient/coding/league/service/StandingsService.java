@@ -4,6 +4,6 @@ import com.sapient.coding.league.vo.Standings;
 
 public interface StandingsService {
 	
-	Standings getStandingsByTeam(int teamId);
+	Standings getStandingsByTeam(Integer teamId);
 
 }

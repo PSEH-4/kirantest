@@ -17,7 +17,7 @@ public class StandingsController {
 	StandingsService service;
 	
 	@RequestMapping("/standings/{id}")
-	public Standings getEmployees(@PathVariable int id) {
+	public Standings getStandings(@PathVariable int id) {
 		return service.getStandingsByTeam(id);
 	}
 
