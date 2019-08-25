@@ -10,7 +10,7 @@ node {
        sh "docker push kirankumarpolusani/repo:v2.0.0"
     }
     stage('Deploy to staging') {
-        sh "docker run -d --rm -p 9999:9999 --name springboot kirankumarpolusani/repo:v2.0.0"
+        sh "docker run -d --rm -p 8080:8080 --name springboot kirankumarpolusani/repo:v2.0.0"
     }
 
 }

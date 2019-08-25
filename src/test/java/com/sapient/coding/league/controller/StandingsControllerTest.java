@@ -1,6 +1,7 @@
 package com.sapient.coding.league.controller;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import org.hamcrest.Matchers;
 import org.hibernate.annotations.Any;
@@ -37,6 +38,13 @@ public class StandingsControllerTest {
 		Mockito.when(service.getStandingsByTeam(Mockito.anyInt())).thenReturn(new Standings());
 		Standings standing = controller.getStandings(1);
 		assertNotNull(standing);
+	}
+	
+	@Test
+	public void testStandingsIfNull() {
+		Mockito.when(service.getStandingsByTeam(Mockito.anyInt())).thenReturn(null);
+		Standings standing = controller.getStandings(1);
+		assertNull(standing);
 	}
 
 }
